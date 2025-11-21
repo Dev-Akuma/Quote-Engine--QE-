@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: rgb(255, 255, 255);
+    --primary-txt: #5a5a5a;
+    --secondary-txt: #6e6e6e;
+    --tertiary-txt: #a0a0a0;
+}
+.dark-mode {
+    --bg: rgb(34, 34, 34);
+    --primary-txt: #d3d3d3;
+    --secondary-txt: #7a7a7a;
+    --tertiary-txt: #5a5a5a;
+}
+.RectBG {
+    width: 100%;
+    background-color: var(--bg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.RectBG-footer {
+    box-shadow:0px -2px 5px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    padding-top: 30px;
+}
+
+#title {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--primary-txt);
+    font-size: 30px;
+    margin-left: 30px;
+    padding-top: 10px;
+}
+#subtitle {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--secondary-txt);
+    font-size: 10px;
+    margin:5px 0px 0px 50px;
+    top:0px;
+    position: relative;
+    padding-bottom: 10px;
+}
+main {
+    height: 100vh;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: center; 
+    padding: 0px 20px;
+}
+#quote-box {
+    margin-bottom: 10vh;
+    margin-top: 25vh;
+    font-family: "JetBrains Mono", monospace;
+}
+#generate-btn {
+    font-family: "JetBrains Mono", monospace;
+    background-color: var(--bg);
+    color: var(--primary-txt);
+    border: 2px solid var(--primary-txt);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+#generate-btn:hover {
+    background-color: var(--primary-txt);
+    color: var(--bg);
+    transform: scale(1.2);
+}
+.Bot-Cmnts {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+    padding-top: 100vh; 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    color: var(--tertiary-txt); 
+}
+/* Styling for individual bot comments to enforce scrolling between them */
+.Bot-Cmnts p {
+    /* Large margin below each comment to force scrolling */
+    margin-bottom: 20vh; 
+    font-size: 1.2em; /* Increase font size slightly for readability on its own line */
+    color: var(--tertiary-txt);
+    /* Center the text within the constrained width */
+    text-align: center;
+}
+
+/* Ensure the last comment doesn't have a massive margin below it */
+.Bot-Cmnts p:last-child {
+    /* Resetting the margin-bottom added above */
+    margin-bottom: 10vh; 
+    filter: drop-shadow(0 0 10px rgba(255, 52, 38, 0.7));
+    /* Keep the unique styling for the 'DEAD END!' message */
+    color: #f44336;
+    font-weight: bold;
+    font-size: 1.5em; /* Make the final message even more dramatic */
+    margin-top: 15px;
+}
+footer {
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+    color: var(--secondary-txt);
+    font-size: 14px;
+}
+.social-links {
+    margin-bottom: 15px;
+}
+.social-links a {
+    color: var(--secondary-txt);
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-links a:hover {
+    color: var(--primary-txt);
+    transform: scale(1.2);
+}
+
+/* Keyframe for a slight, fast shake */
+@keyframes shake-1 {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-2px); }
+    40% { transform: translateX(2px); }
+    60% { transform: translateX(-1px); }
+    80% { transform: translateX(1px); }
+}
+
+/* Keyframe for a stronger shake (used later) */
+@keyframes shake-2 {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+}
+
+/* 1. Base shake class (applied on every click) */
+.shake {
+    animation: shake-1 0.4s ease-in-out;
+}
+
+/* 2. Increased intensity shake class (applied on higher click counts) */
+.shake-intense {
+    animation: shake-2 0.3s ease-in-out;
+}
