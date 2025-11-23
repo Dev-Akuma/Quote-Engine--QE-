@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Font: Inter (used by default with Tailwind) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Apply the custom font and smooth scrolling */
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s;
+        }
+        /* Keyframe for a subtle, floating effect on the icon */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating-icon {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen flex items-center justify-center p-4">
+
+    <!-- Error Container -->
+    <div class="max-w-xl w-full text-center p-8 md:p-12 bg-white rounded-xl shadow-2xl border border-gray-100">
+
+        <!-- Error Icon/Graphic -->
+        <div class="mb-8">
+            <svg class="h-24 w-24 text-indigo-500 mx-auto floating-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <!-- Lucide icon: Zap Off (Represents a broken connection/link) -->
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.332 7.025l-2.007 2.007M11.332 7.025A5.987 5.987 0 0112 6c.334 0 .668.019 1 .054L15 4.5M11.332 7.025l-2.007 2.007m2.007-2.007l1.004-1.003M15 4.5l-2.007 2.007m2.007-2.007l1.004-1.003m-2.007 2.007L13 7.054A5.987 5.987 0 0112 6c-.334 0-.668.019-1 .054M15 4.5l-2.007 2.007m2.007-2.007l-1.004-1.003M12 6.054L10 8.062M12 6.054A5.987 5.987 0 0112 6m0 0a5.987 5.987 0 011-.054m-1 .054L10 8.062M10 8.062l-1 1M13 7.054l1 1m-1-1l1 1M12 6.054l-1 1m-1 1l-1 1m-1 1l-1 1m-1 1l-1 1m-1 1l-1 1M12 6.054A5.987 5.987 0 0112 6c.334 0 .668.019 1 .054L15 4.5" />
+            </svg>
+        </div>
+
+        <!-- Main Title and Status Code -->
+        <p class="text-6xl md:text-8xl font-extrabold text-gray-800 mb-2">Prenk'd</p>
+        
+        <!-- Error Message -->
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-700 mb-4 tracking-tight">
+            Admin doesn't have a Facebook!
+        </h1>
+
+        <!-- Subtext/Explanation -->
+        <p class="text-gray-500 mb-8 max-w-md mx-auto">
+            Whoopsie diasy! The admin is too lazy and hasn't created a Facebook profile. Maybe try another link?
+        </p>
+
+        <!-- Navigation Options -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            
+            <!-- Primary CTA: Go Home -->
+            <a href="/" class="px-6 py-3 text-lg font-semibold rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-150 shadow-md transform hover:scale-[1.02]">
+                Quote Engine
+            </a>
+            
+            <!-- Secondary CTA: Contact/Report -->
+            <a href="mailto:support@quoteengine.com" class="px-6 py-3 text-lg font-semibold rounded-lg text-indigo-600 bg-indigo-100 hover:bg-indigo-200 transition duration-150 shadow-md">
+                Report Issue
+            </a>
+        </div>
+        
+        <!-- Subtle Footer -->
+        <p class="mt-8 text-sm text-gray-400">
+            Error Code: Who even uses Facebook anymore?
+        </p>
+
+    </div>
+</body>
+</html>
