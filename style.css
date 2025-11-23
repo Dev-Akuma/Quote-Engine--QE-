@@ -58,6 +58,13 @@ main {
     margin-top: 25vh;
     font-family: "JetBrains Mono", monospace;
 }
+#quote-source-display {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--secondary-txt);
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
 #generate-btn {
     font-family: "JetBrains Mono", monospace;
     background-color: var(--bg);
